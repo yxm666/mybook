@@ -1,0 +1,63 @@
+{
+    "plugins": [
+        "flexible-alerts",
+        "-search",
+        "search-pro",
+        "pageview-count",
+        "simple-page-toc",
+        "tbfed-pagefooter",
+        "popup",
+        "sharing-plus",
+        "klipse",
+        "flexible-alerts",
+        "pageview-count",
+        "auto-scroll-table",
+        "lightbox",
+        "advanced-emoji",
+        "katex",
+        "disqus",
+        "back-to-top-button",
+        "chapter-fold",
+        "-lunr",
+        "splitter",
+        "code"
+    ],
+    "pluginsConfig": {
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+        "disqus": {
+            "shortName": "gitbookuse"
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright &copy yxm666.github.io/mybook 2019",
+            "modify_label": "该文章修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "sharing": {
+        "douban": true,
+            "facebook": true,
+            "google": true,
+            "pocket": true,
+            "qq": true,
+            "qzone": true,
+            "twitter": true,
+            "weibo": true,
+            "all": [
+                "douban",
+                "facebook",
+                "google",
+                "instapaper",
+                "linkedin",
+                "twitter",
+                "weibo",
+                "messenger",
+                "qq",
+                "qzone",
+                "viber",
+                "whatsapp"
+            ]
+        }
+    }
+}
