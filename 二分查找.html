@@ -1,0 +1,683 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>08. 二分查找 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="跳表.html" />
+    
+    
+    <link rel="prev" href="sort.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"yxm666","repo":"mybook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    书籍介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">入门篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="数据结构与算法.html">
+            
+                <a href="数据结构与算法.html">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Array.html">
+            
+                <a href="Array.html">
+            
+                    
+                    02. 数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="LinkList.html">
+            
+                <a href="LinkList.html">
+            
+                    
+                    03. 链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="递归.html">
+            
+                <a href="递归.html">
+            
+                    
+                    04. 递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Stack.html">
+            
+                <a href="Stack.html">
+            
+                    
+                    05. 栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="queue.html">
+            
+                <a href="queue.html">
+            
+                    
+                    06. 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="sort.html">
+            
+                <a href="sort.html">
+            
+                    
+                    07. 排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.7" data-path="二分查找.html">
+            
+                <a href="二分查找.html">
+            
+                    
+                    08. 二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="跳表.html">
+            
+                <a href="跳表.html">
+            
+                    
+                    09.跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="散列表.html">
+            
+                <a href="散列表.html">
+            
+                    
+                    10.散列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="哈希算法.html">
+            
+                <a href="哈希算法.html">
+            
+                    
+                    11.哈希算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="二叉树.html">
+            
+                <a href="二叉树.html">
+            
+                    
+                    12.二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="红黑树.md">
+            
+                <span>
+            
+                    
+                    13.红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="二叉堆.html">
+            
+                <a href="二叉堆.html">
+            
+                    
+                    14.二叉堆与优先队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" data-path="图.html">
+            
+                <a href="图.html">
+            
+                    
+                    15.图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="DFS and BFS.html">
+            
+                <a href="DFS and BFS.html">
+            
+                    
+                    16.深度优先遍历 和 广度优先遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >08. 二分查找</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E8C;&#x5206;&#x67E5;&#x627E;">&#x4E8C;&#x5206;&#x67E5;&#x627E;</h1>
+<h2 id="&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x601D;&#x60F3;">&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x601D;&#x60F3;</h2>
+<p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#xFF08;Binary Search&#xFF09;&#x7B97;&#x6CD5;&#xFF0C;&#x4E5F;&#x53EB;&#x6298;&#x534A;&#x67E5;&#x627E;&#x7B97;&#x6CD5;&#x3002;</p>
+<p><strong>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x9488;&#x5BF9;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5408;&#xFF0C;&#x67E5;&#x627E;&#x601D;&#x60F3;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x5206;&#x6CBB;&#x601D;&#x60F3;&#x3002;&#x6BCF;&#x6B21;&#x90FD;&#x901A;&#x8FC7;&#x8DDF;&#x533A;&#x95F4;&#x7684;&#x4E2D;&#x95F4;&#x5143;&#x7D20;&#x5BF9;&#x6BD4;&#xFF0C;&#x5C06;&#x5F85;&#x67E5;&#x627E;&#x7684;&#x533A;&#x95F4;&#x7F29;&#x5C0F;&#x4E3A;&#x4E4B;&#x524D;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x8981;&#x67E5;&#x627E;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x6216;&#x8005;&#x533A;&#x95F4;&#x88AB;&#x7F29;&#x5C0F;&#x4E3A; 0</strong>&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x6709; 1000 &#x6761;&#x8BA2;&#x5355;&#x6570;&#x636E;&#xFF0C;&#x5DF2;&#x7ECF;&#x6309;&#x7167;&#x8BA2;&#x5355;&#x91D1;&#x989D;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#xFF0C;&#x6BCF;&#x4E2A;&#x8BA2;&#x5355;&#x91D1;&#x989D;&#x90FD;&#x4E0D;&#x540C;&#xFF0C;&#x5E76;&#x4E14;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#x662F;&#x5143;&#x3002;&#x73B0;&#x5728;&#x60F3;&#x77E5;&#x9053;&#x662F;&#x5426;&#x5B58;&#x5728;&#x91D1;&#x989D;&#x7B49;&#x4E8E; 19 &#x5143;&#x7684;&#x8BA2;&#x5355;&#x3002;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x8BA2;&#x5355;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x8FD4;&#x56DE; null&#x3002;</p>
+<p>&#x5229;&#x7528;&#x4E8C;&#x5206;&#x601D;&#x60F3;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x4E0E;&#x533A;&#x95F4;&#x7684;&#x4E2D;&#x95F4;&#x6570;&#x636E;&#x6BD4;&#x5BF9;&#x5927;&#x5C0F;&#xFF0C;&#x7F29;&#x5C0F;&#x67E5;&#x627E;&#x533A;&#x95F4;&#x7684;&#x8303;&#x56F4;&#x3002;&#x4E0B;&#x56FE;&#x4E2D;&#xFF0C;low &#x548C; high &#x8868;&#x793A;&#x5F85;&#x67E5;&#x627E;&#x533A;&#x95F4;&#x7684;&#x4E0B;&#x6807;&#xFF0C;mid &#x8868;&#x793A;&#x5F85;&#x67E5;&#x627E;&#x533A;&#x95F4;&#x7684;&#x4E2D;&#x95F4;&#x5143;&#x7D20;&#x4E0B;&#x6807;&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb3fpmm5vij30eg0ba41h.jpg" data-lightbox="fc949620-09f3-4387-887e-d6d45e0989cc" data-title="1570440501975" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb3fpmm5vij30eg0ba41h.jpg" alt="1570440501975"></a></p>
+<p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(logn) </p>
+<h2 id="&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x5B9E;&#x73B0;">&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x5B9E;&#x73B0;</h2>
+<p><strong>&#x6700;&#x7B80;&#x5355;&#x7684;&#x60C5;&#x51B5;</strong>&#x5C31;&#x662F;<strong>&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x91CD;&#x590D;&#x5143;&#x7D20;</strong>&#xFF0C; Java &#x4EE3;&#x7801;&#x5FAA;&#x73AF;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">bsearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> value)</span> </span>{
+  <span class="hljs-keyword">int</span> low = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">int</span> high = n - <span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">while</span> (low &lt;= high) {
+    <span class="hljs-keyword">int</span> mid = (low + high) / <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">if</span> (a[mid] == value) {
+      <span class="hljs-keyword">return</span> mid;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a[mid] &lt; value) {
+      low = mid + <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      high = mid - <span class="hljs-number">1</span>;
+    }
+  }
+
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>ow&#x3001;high&#x3001;mid &#x90FD;&#x662F;&#x6307;&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#xFF0C;&#x5176;&#x4E2D; low &#x548C; high &#x8868;&#x793A;&#x5F53;&#x524D;&#x67E5;&#x627E;&#x7684;&#x533A;&#x95F4;&#x8303;&#x56F4;&#xFF0C;&#x521D;&#x59CB; low=0&#xFF0C; high=n-1&#x3002;mid &#x8868;&#x793A; [low, high] &#x7684;&#x4E2D;&#x95F4;&#x4F4D;&#x7F6E;&#x3002;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5BF9;&#x6BD4; a[mid] &#x4E0E; value &#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x6765;&#x66F4;&#x65B0;&#x63A5;&#x4E0B;&#x6765;&#x8981;&#x67E5;&#x627E;&#x7684;&#x533A;&#x95F4;&#x8303;&#x56F4;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x6216;&#x8005;&#x533A;&#x95F4;&#x7F29;&#x5C0F;&#x4E3A; 0&#xFF0C;&#x5C31;&#x9000;&#x51FA;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x70B9;&#xFF1A;</p>
+<p>1.&#x5FAA;&#x73AF;&#x9000;&#x51FA;&#x6761;&#x4EF6;&#x662F; low&lt;=high&#xFF0C;&#x800C;&#x4E0D;&#x662F; low&lt;high&#x3002;</p>
+<p>2.mid=(low+high)/2 &#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x5728; low &#x548C; high &#x6BD4;&#x8F83;&#x5927;&#x65F6;&#xFF0C;&#x4E24;&#x8005;&#x4E4B;&#x548C;&#x53EF;&#x80FD;&#x4F1A;&#x6EA2;&#x51FA;&#x3002;</p>
+<p>&#x6539;&#x8FDB;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5C06; mid &#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x5199;&#x6210; low+(high-low)/2&#xFF0C;&#x8F6C;&#x5316;&#x6210;&#x4F4D;&#x8FD0;&#x7B97; low+((high-low)&gt;&gt;1)&#x66F4;&#x4F73;&#x3002;</p>
+<p>3.&#x5199;&#x6210; low=mid &#x6216;&#x8005; high=mid&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;&#x5E94;&#x5F53;&#x5199;&#x6210;low=mid+1&#xFF0C;high=mid-1&#x3002;</p>
+<p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;java&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x9012;&#x5F52;&#x5B9E;&#x73B0;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">bsearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> val)</span> </span>{
+  <span class="hljs-keyword">return</span> bsearchInternally(a, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>, val);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">bsearchInternally</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> low, <span class="hljs-keyword">int</span> high, <span class="hljs-keyword">int</span> value)</span> </span>{
+  <span class="hljs-keyword">if</span> (low &gt; high) <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">int</span> mid =  low + ((high - low) &gt;&gt; <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">if</span> (a[mid] == value) {
+    <span class="hljs-keyword">return</span> mid;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a[mid] &lt; value) {
+    <span class="hljs-keyword">return</span> bsearchInternally(a, mid+<span class="hljs-number">1</span>, high, value);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> bsearchInternally(a, low, mid-<span class="hljs-number">1</span>, value);
+  }
+}
+</code></pre>
+<h2 id="&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x5E94;&#x7528;&#x573A;&#x666F;&#x7684;&#x5C40;&#x9650;&#x6027;">&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x5E94;&#x7528;&#x573A;&#x666F;&#x7684;&#x5C40;&#x9650;&#x6027;</h2>
+<p><strong>1.&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x4F9D;&#x8D56;&#x7684;&#x662F;&#x987A;&#x5E8F;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x5373;&#x6570;&#x7EC4;&#x3002;</strong></p>
+<p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7B97;&#x6CD5;&#x9700;&#x8981;&#x6309;&#x7167;&#x4E0B;&#x6807;&#x968F;&#x673A;&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x7528;&#x94FE;&#x8868;&#x968F;&#x673A;&#x8BBF;&#x95EE;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O(n)&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x94FE;&#x8868;&#x5B58;&#x50A8;&#xFF0C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5C31;&#x4F1A;&#x53D8;&#x5F97;&#x5F88;&#x9AD8;&#x3002;</p>
+<p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x53EA;&#x80FD;&#x7528;&#x5728;&#x6570;&#x636E;&#x662F;&#x901A;&#x8FC7;&#x987A;&#x5E8F;&#x8868;&#x6765;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E0A;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x6570;&#x636E;&#x662F;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x5219;&#x65E0;&#x6CD5;&#x5E94;&#x7528;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x3002;</p>
+<p><strong>2.&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x8981;&#x6C42;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x65E0;&#x5E8F;&#x4F46;&#x6CA1;&#x6709;&#x9891;&#x7E41;&#x7684;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x3002;</strong></p>
+<p>&#x6570;&#x636E;&#x6CA1;&#x6709;&#x5E8F;&#xFF0C;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x6392;&#x5E8F;&#xFF0C;&#x591A;&#x6B21;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x3002;&#x8FD9;&#x6837;&#x6392;&#x5E8F;&#x7684;&#x6210;&#x672C;&#x53EF;&#x88AB;&#x5747;&#x644A;&#xFF0C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x8FB9;&#x9645;&#x6210;&#x672C;&#x5C31;&#x4F1A;&#x6BD4;&#x8F83;&#x4F4E;&#x3002;</p>
+<p>&#x4F46;&#x5982;&#x679C;&#x6570;&#x636E;&#x96C6;&#x5408;&#x6709;&#x9891;&#x7E41;&#x7684;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x8981;&#x60F3;&#x7528;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#xFF0C;&#x8981;&#x4E48;&#x6BCF;&#x6B21;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x4ECD;&#x7136;&#x6709;&#x5E8F;&#xFF0C;&#x8981;&#x4E48;&#x5728;&#x6BCF;&#x6B21;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x4E4B;&#x524D;&#x90FD;&#x5148;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x9488;&#x5BF9;&#x8FD9;&#x79CD;&#x52A8;&#x6001;&#x6570;&#x636E;&#x96C6;&#x5408;&#xFF0C;&#x65E0;&#x8BBA;&#x54EA;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x7EF4;&#x62A4;&#x6709;&#x5E8F;&#x7684;&#x6210;&#x672C;&#x90FD;&#x662F;&#x5F88;&#x9AD8;&#x7684;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x53EA;&#x80FD;&#x7528;&#x5728;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x4E0D;&#x9891;&#x7E41;&#xFF0C;&#x4E00;&#x6B21;&#x6392;&#x5E8F;&#x591A;&#x6B21;&#x67E5;&#x627E;&#x7684;&#x573A;&#x666F;&#x4E2D;&#x3002;</p>
+<p><strong>3.&#x6570;&#x636E;&#x91CF;&#x592A;&#x5C0F;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x4E0D;&#x5927;</strong></p>
+<p>&#x4F46;&#x5982;&#x679C;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x975E;&#x5E38;&#x8017;&#x65F6;&#xFF0C;&#x6BD4;&#x8F83;&#x6B21;&#x6570;&#x7684;&#x51CF;&#x5C11;&#x4F1A;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x5C31;&#x6BD4;&#x987A;&#x5E8F;&#x904D;&#x5386;&#x66F4;&#x6709;&#x4F18;&#x52BF;&#x3002;</p>
+<p><strong>4.&#x6570;&#x636E;&#x91CF;&#x592A;&#x5927;&#x4E0D;&#x9002;&#x5408;&#x4E8C;&#x5206;&#x67E5;&#x627E;</strong></p>
+<p>&#x53EA;&#x6709;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x4F18;&#x52BF;&#x624D;&#x4F1A;&#x6BD4;&#x8F83;&#x660E;&#x663E;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x4F8B;&#x5916;&#x3002;&#x5982;&#x679C;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x975E;&#x5E38;&#x8017;&#x65F6;&#xFF0C;&#x4E0D;&#x7BA1;&#x6570;&#x636E;&#x91CF;&#x5927;&#x5C0F;&#xFF0C;&#x6211;&#x90FD;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x90FD;&#x662F;&#x957F;&#x5EA6;&#x8D85;&#x8FC7; 300 &#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5982;&#x6B64;&#x957F;&#x7684;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E4B;&#x95F4;&#x6BD4;&#x5BF9;&#x5927;&#x5C0F;&#xFF0C;&#x5C31;&#x4F1A;&#x975E;&#x5E38;&#x8017;&#x65F6;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x51CF;&#x5C11;&#x6BD4;&#x8F83;&#x6B21;&#x6570;&#xFF0C;&#x800C;&#x6BD4;&#x8F83;&#x6B21;&#x6570;&#x7684;&#x51CF;&#x5C11;&#x4F1A;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x5C31;&#x6BD4;&#x987A;&#x5E8F;&#x904D;&#x5386;&#x66F4;&#x6709;&#x4F18;&#x52BF;&#x3002;</p>
+<p>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x5E95;&#x5C42;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x6570;&#x7EC4;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x800C;&#x6570;&#x7EC4;&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x968F;&#x673A;&#x8BBF;&#x95EE;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x8981;&#x6C42;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x8FDE;&#x7EED;&#xFF0C;&#x5BF9;&#x5185;&#x5B58;&#x7684;&#x8981;&#x6C42;&#x6BD4;&#x8F83;&#x82DB;&#x523B;&#x3002;&#x6BD4;&#x5982;&#x6709; 1GB &#x5927;&#x5C0F;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x6570;&#x7EC4;&#x6765;&#x5B58;&#x50A8;&#xFF0C;&#x5C31;&#x9700;&#x8981; 1GB &#x7684;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x3002;</p>
+<p>&#x201C;&#x8FDE;&#x7EED;&#x201D;&#x610F;&#x5473;&#x7740;&#x5373;&#x4FBF;&#x6709; 2GB &#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5269;&#x4F59;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x8FD9;&#x5269;&#x4F59;&#x7684; 2GB &#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x90FD;&#x662F;&#x96F6;&#x6563;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x8FDE;&#x7EED;&#x7684; 1GB &#x5927;&#x5C0F;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x90A3;&#x5C31;&#x65E0;&#x6CD5;&#x7533;&#x8BF7;&#x4E00;&#x4E2A; 1GB &#x5927;&#x5C0F;&#x7684;&#x6570;&#x7EC4;&#x3002;</p>
+<h2 id="&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x4E09;&#x79CD;&#x53D8;&#x4F53;">&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x4E09;&#x79CD;&#x53D8;&#x4F53;</h2>
+<h3 id="&#x53D8;&#x4F53;&#x4E00;&#x67E5;&#x627E;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;">&#x53D8;&#x4F53;&#x4E00;:&#x67E5;&#x627E;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">bsearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> value)</span> </span>{
+  <span class="hljs-keyword">int</span> low = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">int</span> high = n - <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">while</span> (low &lt;= high) {
+    <span class="hljs-keyword">int</span> mid =  low + ((high - low) &gt;&gt; <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span> (a[mid] &gt; value) {
+      high = mid - <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a[mid] &lt; value) {
+      low = mid + <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">if</span> ((mid == n - <span class="hljs-number">1</span>) || (a[mid + <span class="hljs-number">1</span>] != value)) <span class="hljs-keyword">return</span> mid;
+      <span class="hljs-keyword">else</span> low = mid + <span class="hljs-number">1</span>;
+    }
+  }
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>&#x5982;&#x679C; a[mid] &#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x5DF2;&#x7ECF;&#x662F;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E86;&#xFF0C;&#x90A3;&#x5B83;&#x80AF;&#x5B9A;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x627E;&#x7684;&#xFF1B;</p>
+<p>&#x5982;&#x679C; a[mid] &#x7684;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20; a[mid+1] &#x4E0D;&#x7B49;&#x4E8E; value&#xFF0C;&#x90A3;&#x4E5F;&#x8BF4;&#x660E; a[mid] &#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x627E;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x5982;&#x679C; a[mid] &#x540E;&#x9762;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20; a[mid+1] &#x4E5F;&#x7B49;&#x4E8E; value&#xFF0C;&#x90A3;&#x8BF4;&#x660E;&#x5F53;&#x524D;&#x7684;&#x8FD9;&#x4E2A; a[mid] &#x5E76;&#x4E0D;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;&#x3002;&#x6211;&#x4EEC;&#x5C31;&#x66F4;&#x65B0; low=mid+1&#xFF0C;&#x56E0;&#x4E3A;&#x8981;&#x627E;&#x7684;&#x5143;&#x7D20;&#x80AF;&#x5B9A;&#x51FA;&#x73B0;&#x5728; [mid+1, high] &#x4E4B;&#x95F4;&#x3002;</p>
+<h2 id="&#x53D8;&#x4F53;&#x4E8C;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;">&#x53D8;&#x4F53;&#x4E8C;:&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5143;&#x7D20;</h2>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">bsearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> value)</span> </span>{
+  <span class="hljs-keyword">int</span> low = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">int</span> high = n - <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">while</span> (low &lt;= high) {
+    <span class="hljs-keyword">int</span> mid =  low + ((high - low) &gt;&gt; <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span> (a[mid] &gt;= value) {
+      <span class="hljs-keyword">if</span> ((mid == <span class="hljs-number">0</span>) || (a[mid - <span class="hljs-number">1</span>] &lt; value)) <span class="hljs-keyword">return</span> mid;
+      <span class="hljs-keyword">else</span> high = mid - <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      low = mid + <span class="hljs-number">1</span>;
+    }
+  }
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>&#x5982;&#x679C; a[mid] &#x5C0F;&#x4E8E;&#x8981;&#x67E5;&#x627E;&#x7684;&#x503C; value&#xFF0C;&#x90A3;&#x8981;&#x67E5;&#x627E;&#x7684;&#x503C;&#x80AF;&#x5B9A;&#x5728; [mid+1, high] &#x4E4B;&#x95F4;&#xFF0C;&#x66F4;&#x65B0; low=mid+1&#x3002;</p>
+<p>&#x5BF9;&#x4E8E; a[mid] &#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x7ED9;&#x5B9A;&#x503C; value &#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x679C; a[mid] &#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x6216;&#x8005;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x5143;&#x7D20; a[mid-1] &#x5C0F;&#x4E8E;&#x8981;&#x67E5;&#x627E;&#x7684;&#x503C; value&#xFF0C;&#x90A3; a[mid] &#x5C31;&#x662F;&#x76EE;&#x6807;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x5982;&#x679C; a[mid-1] &#x4E5F;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x8981;&#x67E5;&#x627E;&#x7684;&#x503C; value&#xFF0C;&#x90A3;&#x8BF4;&#x660E;&#x8981;&#x67E5;&#x627E;&#x7684;&#x5143;&#x7D20;&#x5728; [low, mid-1] &#x4E4B;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x5C06; high &#x66F4;&#x65B0;&#x4E3A; mid-1&#x3002;</p>
+<h3 id="&#x5B9E;&#x4F53;&#x4E09;">&#x5B9E;&#x4F53;&#x4E09;:</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">bsearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> value)</span> </span>{
+  <span class="hljs-keyword">int</span> low = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">int</span> high = n - <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">while</span> (low &lt;= high) {
+    <span class="hljs-keyword">int</span> mid =  low + ((high - low) &gt;&gt; <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span> (a[mid] &gt; value) {
+      high = mid - <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">if</span> ((mid == n - <span class="hljs-number">1</span>) || (a[mid + <span class="hljs-number">1</span>] &gt; value)) <span class="hljs-keyword">return</span> mid;
+      <span class="hljs-keyword">else</span> low = mid + <span class="hljs-number">1</span>;
+    }
+  }
+  <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; yxm666.github.io/mybook 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-01-20 23:40:21
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sort.html" class="navigation navigation-prev " aria-label="Previous page: 07. 排序">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="跳表.html" class="navigation navigation-next " aria-label="Next page: 09.跳表">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"08. 二分查找","level":"3.7","depth":1,"next":{"title":"09.跳表","level":"3.8","depth":1,"path":"跳表.md","ref":"跳表.md","articles":[]},"previous":{"title":"07. 排序","level":"3.6","depth":1,"path":"sort.md","ref":"sort.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["flexible-alerts","-search","search-pro","pageview-count","simple-page-toc","tbfed-pagefooter","popup","sharing-plus","klipse","flexible-alerts","pageview-count","auto-scroll-table","lightbox","advanced-emoji","katex","disqus","back-to-top-button","chapter-fold","-lunr","splitter","github","github-buttons","code"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy yxm666.github.io/mybook 2019","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"github":{"url":"https://github.com/yxm666"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"yxm666","repo":"mybook","type":"star","size":"small","count":true}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"twitter":true,"vk":false,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"二分查找.md","mtime":"2020-01-20T15:40:21.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T09:32:44.183Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

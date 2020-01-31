@@ -1,0 +1,735 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>09.跳表 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="散列表.html" />
+    
+    
+    <link rel="prev" href="二分查找.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"yxm666","repo":"mybook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    书籍介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">入门篇</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="数据结构与算法.html">
+            
+                <a href="数据结构与算法.html">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础篇</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Array.html">
+            
+                <a href="Array.html">
+            
+                    
+                    02. 数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="LinkList.html">
+            
+                <a href="LinkList.html">
+            
+                    
+                    03. 链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="递归.html">
+            
+                <a href="递归.html">
+            
+                    
+                    04. 递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Stack.html">
+            
+                <a href="Stack.html">
+            
+                    
+                    05. 栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="queue.html">
+            
+                <a href="queue.html">
+            
+                    
+                    06. 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="sort.html">
+            
+                <a href="sort.html">
+            
+                    
+                    07. 排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="二分查找.html">
+            
+                <a href="二分查找.html">
+            
+                    
+                    08. 二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.8" data-path="跳表.html">
+            
+                <a href="跳表.html">
+            
+                    
+                    09.跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="散列表.html">
+            
+                <a href="散列表.html">
+            
+                    
+                    10.散列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="哈希算法.html">
+            
+                <a href="哈希算法.html">
+            
+                    
+                    11.哈希算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="二叉树.html">
+            
+                <a href="二叉树.html">
+            
+                    
+                    12.二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="红黑树.md">
+            
+                <span>
+            
+                    
+                    13.红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="二叉堆.html">
+            
+                <a href="二叉堆.html">
+            
+                    
+                    14.二叉堆与优先队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" data-path="图.html">
+            
+                <a href="图.html">
+            
+                    
+                    15.图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="DFS and BFS.html">
+            
+                <a href="DFS and BFS.html">
+            
+                    
+                    16.深度优先遍历 和 广度优先遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >09.跳表</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8DF3;&#x8868;&#x94FE;&#x8868;&#x591A;&#x7EA7;&#x7D22;&#x5F15;">&#x8DF3;&#x8868;=&#x94FE;&#x8868;+&#x591A;&#x7EA7;&#x7D22;&#x5F15;</h1>
+<p>&#x8DF3;&#x8868;&#x4F7F;&#x7528;&#x7A7A;&#x95F4;&#x6362;&#x65F6;&#x95F4;&#x7684;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;&#xFF0C;&#x901A;&#x8FC7;&#x6784;&#x5EFA;&#x591A;&#x7EA7;&#x7D22;&#x5F15;&#x6765;&#x63D0;&#x9AD8;&#x67E5;&#x8BE2;&#x7684;&#x6548;&#x7387;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x57FA;&#x4E8E;&#x94FE;&#x8868;&#x7684;&#x201C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x201D;&#x3002;&#x8DF3;&#x8868;&#x662F;&#x4E00;&#x79CD;&#x52A8;&#x6001;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x652F;&#x6301;&#x5FEB;&#x901F;&#x7684;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x3001;&#x67E5;&#x627E;&#x64CD;&#x4F5C;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x90FD;&#x662F; O(logn)&#x3002;</p>
+<p>&#x8DF3;&#x8868;&#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O(n)&#x3002;&#x8DF3;&#x8868;&#x7684;&#x5B9E;&#x73B0;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x7D22;&#x5F15;&#x6784;&#x5EFA;&#x7B56;&#x7565;&#xFF0C;&#x6709;&#x6548;&#x5E73;&#x8861;&#x6267;&#x884C;&#x6548;&#x7387;&#x548C;&#x5185;&#x5B58;&#x6D88;&#x8017;&#x3002;&#x8DF3;&#x8868;&#x7684;&#x4EE3;&#x7801;&#x6BD4;&#x8D77;&#x7EA2;&#x9ED1;&#x6811;&#x6765;&#x8BF4;&#xFF0C;&#x8981;&#x7B80;&#x5355;&#x3001;&#x6613;&#x8BFB;&#x3002;</p>
+<p><strong>&#x94FE;&#x8868;&#x52A0;&#x591A;&#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5C31;&#x662F;&#x8DF3;&#x8868;</strong>&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5355;&#x94FE;&#x8868;&#xFF0C;&#x5373;&#x4FBF;&#x94FE;&#x8868;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EA;&#x80FD;&#x4ECE;&#x5934;&#x5230;&#x5C3E;&#x904D;&#x5386;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O(n)&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h11z3voj30hs046jrz.jpg" data-lightbox="b5c2702f-1b0e-4a82-affd-00803b303687" data-title="1570442602270" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h11z3voj30hs046jrz.jpg" alt="1570442602270"></a></p>
+<p>&#x5BF9;&#x94FE;&#x8868;&#x5EFA;&#x7ACB;&#x4E00;&#x7EA7;&#x201C;&#x7D22;&#x5F15;&#x201D;&#xFF0C;&#x6BCF;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9;&#x63D0;&#x53D6;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x5230;&#x4E0A;&#x4E00;&#x7EA7;&#xFF0C;&#x628A;&#x62BD;&#x51FA;&#x6765;&#x7684;&#x90A3;&#x4E00;&#x7EA7;&#x53EB;&#x4F5C;<strong>&#x7D22;&#x5F15;</strong>&#x6216;<strong>&#x7D22;&#x5F15;&#x5C42;</strong>&#x3002;&#x56FE;&#x4E2D;&#x7684; down &#x8868;&#x793A; down &#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;&#x4E0B;&#x4E00;&#x7EA7;&#x7ED3;&#x70B9;&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h1ig7qpj30hs07kmyp.jpg" data-lightbox="7e20097c-1965-4ecb-9a67-91a92fd7b07f" data-title="1570442615779" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h1ig7qpj30hs07kmyp.jpg" alt="1570442615779"></a></p>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5148;&#x5728;&#x7D22;&#x5F15;&#x5C42;&#x904D;&#x5386;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x5C42;&#x7ED3;&#x70B9;&#x7684; down &#x6307;&#x9488;&#xFF0C;&#x4E0B;&#x964D;&#x5230;&#x539F;&#x59CB;&#x94FE;&#x8868;&#x8FD9;&#x4E00;&#x5C42;&#xFF0C;&#x7EE7;&#x7EED;&#x904D;&#x5386;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x8981;&#x67E5;&#x627E;16&#xFF0C;&#x5F53;&#x5728;&#x7D22;&#x5F15;&#x5C42;&#x904D;&#x5386;&#x5230;13&#x65F6;&#xFF0C;&#x53D1;&#x73B0;&#x7D22;&#x5F15;&#x5C42;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x662F;17&#x5927;&#x4E8E;&#x76EE;&#x6807;16&#xFF0C;&#x5219;&#x53EF;&#x4ECE;13&#x7684;down&#x6307;&#x9488;&#x4E0B;&#x964D;&#x5230;&#x539F;&#x59CB;&#x94FE;&#x8868;&#x7EE7;&#x7EED;&#x904D;&#x5386;&#x3002;&#x8FD9;&#x6837;&#x53EA;&#x9700;&#x8981;&#x518D;&#x904D;&#x5386; 2 &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x503C;&#x7B49;&#x4E8E; 16 &#x7684;&#x8FD9;&#x4E2A;&#x7ED3;&#x70B9;&#x4E86;&#x3002;&#x539F;&#x6765;&#x67E5;&#x627E; 16&#xFF0C;&#x9700;&#x8981;&#x904D;&#x5386; 10 &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x52A0;&#x5165;&#x4E00;&#x5C42;&#x7D22;&#x5F15;&#x540E;&#x53EA;&#x9700;&#x8981;&#x904D;&#x5386; 7 &#x4E2A;&#x7ED3;&#x70B9;&#x3002;</p>
+<p><strong>&#x52A0;&#x6765;&#x4E00;&#x5C42;&#x7D22;&#x5F15;&#x4E4B;&#x540E;&#xFF0C;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x9700;&#x8981;&#x904D;&#x5386;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x51CF;&#x5C11;&#x4E86;&#xFF0C;&#x67E5;&#x627E;&#x6548;&#x7387;&#x63D0;&#x9AD8;&#x4E86;</strong>&#x3002;&#x7EE7;&#x7EED;&#x518D;&#x52A0;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF0C;&#x6BCF;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9;&#x5C31;&#x62BD;&#x51FA;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x5230;&#x7B2C;&#x4E8C;&#x7EA7;&#x7D22;&#x5F15;&#x3002;&#x73B0;&#x5728;&#x518D;&#x67E5;&#x627E; 16&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x904D;&#x5386; 6 &#x4E2A;&#x7ED3;&#x70B9;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x904D;&#x5386;&#x7684;&#x7ED3;&#x70B9;&#x6570;&#x91CF;&#x53C8;&#x51CF;&#x5C11;&#x4E86;&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h1ulmv2j30hs0acq51.jpg" data-lightbox="0528ca2a-1717-4fd4-a28c-2a589d0c8162" data-title="1570442649156" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h1ulmv2j30hs0acq51.jpg" alt="1570442649156"></a></p>
+<p>&#x4E0B;&#x56FE;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B; 64 &#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E94;&#x7EA7;&#x7D22;&#x5F15;&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h28to0zj30hs09w0uf.jpg" data-lightbox="57101759-3a05-4743-92f5-7ef046409255" data-title="1570442675055" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h28to0zj30hs09w0uf.jpg" alt="1570442675055"></a></p>
+<p>&#x5728;&#x4E94;&#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x4F5C;&#x7528;&#x4E0B;&#xFF0C;&#x67E5;&#x627E; 62 &#x53EA;&#x9700;&#x8981;&#x904D;&#x5386; 11 &#x4E2A;&#x7ED3;&#x70B9;&#x3002;&#x5F53;&#x94FE;&#x8868;&#x7684;&#x957F;&#x5EA6; n &#x6BD4;&#x8F83;&#x5927;&#x65F6;&#xFF0C;&#x6BD4;&#x5982; 1000&#x3001;10000 &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5728;&#x6784;&#x5EFA;&#x591A;&#x7EA7;&#x7D22;&#x5F15;&#x4E4B;&#x540E;&#xFF0C;&#x67E5;&#x627E;&#x6548;&#x7387;&#x7684;&#x63D0;&#x5347;&#x5C31;&#x4F1A;&#x975E;&#x5E38;&#x660E;&#x663E;&#x3002;</p>
+<h1 id="&#x8DF3;&#x8868;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;">&#x8DF3;&#x8868;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h1>
+<p>&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x91CC;&#x6709; n &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x6BCF;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9;&#x4F1A;&#x62BD;&#x51FA;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x4F5C;&#x4E3A;&#x4E0A;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x90A3;&#x7B2C;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x5927;&#x7EA6;&#x5C31;&#x662F; n/2&#xFF0C;&#x7B2C;&#x4E8C;&#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x5927;&#x7EA6;&#x5C31;&#x662F; n/4&#xFF0C;&#x7B2C;&#x4E09;&#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x5927;&#x7EA6;&#x5C31;&#x662F; n/8&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;<strong>&#x7B2C; k &#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x662F;&#x7B2C; k-1 &#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x7684; 1/2&#xFF0C;&#x90A3;&#x7B2C; k&#x7EA7;&#x7D22;&#x5F15;&#x7ED3;&#x70B9;&#x7684;&#x4E2A;&#x6570;&#x5C31;&#x662F; n/(2^k)*n*/(2*k*)&#x3002;</strong></p>
+<p>&#x5047;&#x8BBE;&#x7D22;&#x5F15;&#x6709; h &#x7EA7;&#xFF0C;&#x6700;&#x9AD8;&#x7EA7;&#x7684;&#x7D22;&#x5F15;&#x6709; 2 &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x5219; n/(2^h)=2<em>n</em>/(2<em>h</em>)=2&#xFF0C;&#x5373; h=log_2n-1<em>h</em>=<em>l<strong>o</strong>g</em>2<em>n</em>&#x2212;1&#x3002;&#x52A0;&#x4E0A;&#x539F;&#x59CB;&#x94FE;&#x8868;&#x8FD9;&#x4E00;&#x5C42;&#xFF0C;&#x6574;&#x4E2A;&#x8DF3;&#x8868;&#x7684;&#x9AD8;&#x5EA6;&#x5C31;&#x662F; log_2n<em>l<strong>o</strong>g</em>2<em>n</em>&#x3002;&#x5728;&#x8DF3;&#x8868;&#x4E2D;&#x67E5;&#x8BE2;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x4E00;&#x5C42;&#x90FD;&#x8981;&#x904D;&#x5386; m &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x90A3;&#x5728;&#x8DF3;&#x8868;&#x4E2D;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F; O(m<em>logn)</em>O<em>(</em>m<em>&#x2217;</em>l<strong>o</strong>g<em>*n</em>)&#x3002;</p>
+<p>&#x6309;&#x7167;&#x6BCF;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9;&#x63D0;&#x53D6;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x5230;&#x4E0A;&#x4E00;&#x7EA7;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#x8FD9;&#x79CD;&#x7ED3;&#x6784;&#xFF0C;&#x6BCF;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#x90FD;&#x6700;&#x591A;&#x53EA;&#x9700;&#x8981;&#x904D;&#x5386; 3 &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;m=3.</p>
+<p>&#x5047;&#x8BBE;&#x8981;&#x67E5;&#x627E;&#x7684;&#x6570;&#x636E;&#x662F; x&#xFF0C;&#x5728;&#x7B2C; k &#x7EA7;&#x7D22;&#x5F15;&#x4E2D;&#x904D;&#x5386;&#x5230; y &#x7ED3;&#x70B9;&#x4E4B;&#x540E;&#xFF0C;&#x53D1;&#x73B0; x &#x5927;&#x4E8E; y&#xFF0C;&#x5C0F;&#x4E8E;&#x540E;&#x9762;&#x7684;&#x7ED3;&#x70B9; z&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x8FC7; y &#x7684; down &#x6307;&#x9488;&#xFF0C;&#x4ECE;&#x7B2C; k &#x7EA7;&#x7D22;&#x5F15;&#x4E0B;&#x964D;&#x5230;&#x7B2C; k-1 &#x7EA7;&#x7D22;&#x5F15;&#x3002;&#x5728;&#x7B2C; k-1 &#x7EA7;&#x7D22;&#x5F15;&#x4E2D;&#xFF0C;y &#x548C; z &#x4E4B;&#x95F4;&#x53EA;&#x6709; 3 &#x4E2A;&#x7ED3;&#x70B9;&#xFF08;&#x5305;&#x542B; y &#x548C; z&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x5728; K-1 &#x7EA7;&#x7D22;&#x5F15;&#x4E2D;&#x6700;&#x591A;&#x53EA;&#x9700;&#x8981;&#x904D;&#x5386; 3 &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#xFF0C;&#x6BCF;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#x90FD;&#x6700;&#x591A;&#x53EA;&#x9700;&#x8981;&#x904D;&#x5386; 3 &#x4E2A;&#x7ED3;&#x70B9;&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h4jfs3wj30hs06udh9.jpg" data-lightbox="359cf6c3-0b25-41ec-bc58-20bd75ea027c" data-title="1570442695929" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h4jfs3wj30hs06udh9.jpg" alt="1570442695929"></a></p>
+<p>&#x6240;&#x4EE5;&#x5728;&#x8DF3;&#x8868;&#x4E2D;&#x67E5;&#x8BE2;&#x4EFB;&#x610F;&#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F; O(logn)&#x3002;</p>
+<h1 id="&#x8DF3;&#x8868;&#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;">&#x8DF3;&#x8868;&#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h1>
+<p>&#x5047;&#x8BBE;&#x539F;&#x59CB;&#x94FE;&#x8868;&#x5927;&#x5C0F;&#x4E3A; n&#xFF0C;&#x90A3;&#x7B2C;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#x5927;&#x7EA6;&#x6709; n/2 &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x7B2C;&#x4E8C;&#x7EA7;&#x7D22;&#x5F15;&#x5927;&#x7EA6;&#x6709; n/4 &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;&#x6BCF;&#x4E0A;&#x5347;&#x4E00;&#x7EA7;&#x5C31;&#x51CF;&#x5C11;&#x4E00;&#x534A;&#xFF0C;&#x76F4;&#x5230;&#x5269;&#x4E0B; 2 &#x4E2A;&#x7ED3;&#x70B9;&#x3002;&#x6BCF;&#x5C42;&#x7D22;&#x5F15;&#x7684;&#x8282;&#x70B9;&#x6570;&#x4E3A;&#xFF1A;</p>
+<p>\frac{n}2,\frac{n}4,\frac{n}8,...,8,4,22<em>n</em>,4<em>n</em>,8<em>n</em>,...,8,4,2</p>
+<p>&#x8FD9;&#x51E0;&#x7EA7;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x70B9;&#x603B;&#x548C;&#x5C31;&#x662F; \frac{n}2+\frac{n}4+\frac{n}8+...+8+4+2=n-22<em>n</em>+4<em>n</em>+8<em>n</em>+...+8+4+2=<em>n</em>&#x2212;2&#x3002;&#x6240;&#x4EE5;&#x8DF3;&#x8868;&#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O(n)&#x3002;</p>
+<p>&#x5C06;&#x5305;&#x542B; n &#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x5355;&#x94FE;&#x8868;&#x6784;&#x9020;&#x6210;&#x8DF3;&#x8868;&#xFF0C;&#x9700;&#x8981;&#x989D;&#x5916;&#x518D;&#x7528;&#x63A5;&#x8FD1; n &#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6BCF;&#x4E09;&#x4E2A;&#x7ED3;&#x70B9;&#x6216;&#x4E94;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x62BD;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x5230;&#x4E0A;&#x7EA7;&#x7D22;&#x5F15;:</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h7nrvjvj30hs05w3za.jpg" data-lightbox="09483e67-5f7b-49f0-af67-bb9134b1bb27" data-title="1570442729225" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6h7nrvjvj30hs05w3za.jpg" alt="1570442729225"></a></p>
+<p>&#x90A3;&#x7B2C;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#x9700;&#x8981;&#x5927;&#x7EA6; n/3 &#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x7B2C;&#x4E8C;&#x7EA7;&#x7D22;&#x5F15;&#x9700;&#x8981;&#x5927;&#x7EA6; n/9 &#x4E2A;&#x7ED3;&#x70B9;&#x3002;&#x6BCF;&#x5F80;&#x4E0A;&#x4E00;&#x7EA7;&#xFF0C;&#x7D22;&#x5F15;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x90FD;&#x9664;&#x4EE5; 3&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8BA1;&#x7B97;&#xFF0C;&#x5047;&#x8BBE;&#x6700;&#x9AD8;&#x4E00;&#x7EA7;&#x7684;&#x7D22;&#x5F15;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x662F; 1&#x3002;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F9D;&#x7136;&#x662F; O(n)&#xFF0C;&#x4F46;&#x6BD4;&#x6BCF;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9;&#x62BD;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x7D22;&#x5F15;&#x6784;&#x5EFA;&#x65B9;&#x6CD5;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x4E00;&#x534A;&#x7684;&#x7D22;&#x5F15;&#x7ED3;&#x70B9;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x3002;</p>
+<p>&#x5728;&#x5B9E;&#x9645;&#x7684;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x539F;&#x59CB;&#x94FE;&#x8868;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x5F88;&#x5927;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x7D22;&#x5F15;&#x7ED3;&#x70B9;&#x53EA;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x5173;&#x952E;&#x503C;&#x548C;&#x51E0;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x5F53;&#x5BF9;&#x8C61;&#x6BD4;&#x7D22;&#x5F15;&#x7ED3;&#x70B9;&#x5927;&#x5F88;&#x591A;&#x65F6;&#xFF0C;&#x90A3;&#x7D22;&#x5F15;&#x5360;&#x7528;&#x7684;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x5C31;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x4E86;&#x3002;</p>
+<h1 id="&#x8DF3;&#x8868;&#x52A8;&#x6001;&#x7684;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;">&#x8DF3;&#x8868;&#x52A8;&#x6001;&#x7684;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;</h1>
+<p>&#x8DF3;&#x8868;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O(logn)&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6hbn9z8nj30hs0d5tb0.jpg" data-lightbox="c2c853a0-ffa2-4bf0-b876-e6aee3e50de9" data-title="1570442776661" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6hbn9z8nj30hs0d5tb0.jpg" alt="1570442776661"></a></p>
+<p>&#x5BF9;&#x4E8E;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x7ED3;&#x70B9;&#x5728;&#x7D22;&#x5F15;&#x4E2D;&#x4E5F;&#x6709;&#x51FA;&#x73B0;&#xFF0C;&#x5220;&#x9664;&#x539F;&#x59CB;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x7ED3;&#x70B9;&#x4E4B;&#x540E;&#x8FD8;&#x8981;&#x5220;&#x9664;&#x5BF9;&#x5E94;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<p>&#x67E5;&#x627E;&#x8981;&#x5220;&#x9664;&#x7684;&#x7ED3;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x83B7;&#x53D6;&#x524D;&#x9A71;&#x7ED3;&#x70B9;&#xFF08;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x4E0D;&#x9700;&#x8981;&#x8003;&#x8651;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF09;&#x3002;</p>
+<h1 id="&#x8DF3;&#x8868;&#x7D22;&#x5F15;&#x52A8;&#x6001;&#x66F4;&#x65B0;">&#x8DF3;&#x8868;&#x7D22;&#x5F15;&#x52A8;&#x6001;&#x66F4;&#x65B0;</h1>
+<p>&#x4E0D;&#x505C;&#x5730;&#x5F80;&#x8DF3;&#x8868;&#x4E2D;&#x63D2;&#x5165;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x66F4;&#x65B0;&#x7D22;&#x5F15;&#xFF0C;&#x5C31;&#x6709;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x67D0; 2 &#x4E2A;&#x7D22;&#x5F15;&#x7ED3;&#x70B9;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x975E;&#x5E38;&#x591A;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x6781;&#x7AEF;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8DF3;&#x8868;&#x8FD8;&#x4F1A;&#x9000;&#x5316;&#x6210;&#x5355;&#x94FE;&#x8868;&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6hbyo3h1j30aq05vjsk.jpg" data-lightbox="b6ad2b41-788d-4574-a12f-f19a6b59ceb2" data-title="1570442793990" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6hbyo3h1j30aq05vjsk.jpg" alt="1570442793990"></a></p>
+<p>&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x52A8;&#x6001;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x9700;&#x8981;&#x67D0;&#x79CD;&#x624B;&#x6BB5;&#x6765;&#x7EF4;&#x62A4;&#x7D22;&#x5F15;&#x4E0E;&#x539F;&#x59CB;&#x94FE;&#x8868;&#x5927;&#x5C0F;&#x4E4B;&#x95F4;&#x7684;&#x5E73;&#x8861;&#xFF1A;</p>
+<p>&#x5982;&#x679C;&#x94FE;&#x8868;&#x4E2D;&#x7ED3;&#x70B9;&#x591A;&#x4E86;&#xFF0C;&#x7D22;&#x5F15;&#x7ED3;&#x70B9;&#x5C31;&#x76F8;&#x5E94;&#x5730;&#x589E;&#x52A0;&#x4E00;&#x4E9B;&#xFF0C;&#x907F;&#x514D;&#x590D;&#x6742;&#x5EA6;&#x9000;&#x5316;&#xFF0C;&#x4EE5;&#x53CA;&#x67E5;&#x627E;&#x3001;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x6027;&#x80FD;&#x4E0B;&#x964D;&#x3002;</p>
+<p>&#x5F80;&#x8DF3;&#x8868;&#x4E2D;&#x63D2;&#x5165;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x63D2;&#x5165;&#x5230;&#x90E8;&#x5206;&#x7D22;&#x5F15;&#x5C42;&#x4E2D;&#x3002;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x51FD;&#x6570;&#xFF0C;&#x6765;&#x51B3;&#x5B9A;&#x5C06;&#x8FD9;&#x4E2A;&#x7ED3;&#x70B9;&#x63D2;&#x5165;&#x5230;&#x54EA;&#x51E0;&#x7EA7;&#x7D22;&#x5F15;&#x4E2D;&#xFF0C;&#x6BD4;&#x5982;&#x968F;&#x673A;&#x51FD;&#x6570;&#x751F;&#x6210;&#x4E86;&#x503C; K&#xFF0C;&#x5C31;&#x5C06;&#x8FD9;&#x4E2A;&#x7ED3;&#x70B9;&#x6DFB;&#x52A0;&#x5230;&#x7B2C;&#x4E00;&#x7EA7;&#x5230;&#x7B2C; K &#x7EA7;&#x8FD9; K &#x7EA7;&#x7D22;&#x5F15;&#x4E2D;&#x3002;</p>
+<p><a href="https://tva1.sinaimg.cn/large/006tNbRwly1gb6hoc4c0vj30hs0d6q5j.jpg" data-lightbox="508beaae-41c5-40c7-b9ff-0c2761552e70" data-title="1570442809447" target="_blank"><img src="https://tva1.sinaimg.cn/large/006tNbRwly1gb6hoc4c0vj30hs0d6q5j.jpg" alt="1570442809447"></a></p>
+<h1 id="redis-&#x7528;&#x8DF3;&#x8868;&#x5B9E;&#x73B0;&#x6709;&#x5E8F;&#x96C6;&#x5408;">Redis &#x7528;&#x8DF3;&#x8868;&#x5B9E;&#x73B0;&#x6709;&#x5E8F;&#x96C6;&#x5408;</h1>
+<p>Redis &#x4E2D;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x662F;&#x901A;&#x8FC7;&#x8DF3;&#x8868;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4E25;&#x683C;&#x70B9;&#x8BB2;&#xFF0C;&#x5176;&#x5B9E;&#x8FD8;&#x7528;&#x5230;&#x4E86;&#x6563;&#x5217;&#x8868;&#x3002;</p>
+<p>Redis &#x4E2D;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x652F;&#x6301;&#x7684;&#x6838;&#x5FC3;&#x64CD;&#x4F5C;&#x4E3B;&#x8981;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x6309;&#x7167;&#x533A;&#x95F4;&#x67E5;&#x627E;&#x6570;&#x636E;&#xFF08;&#x6BD4;&#x5982;&#x67E5;&#x627E;&#x503C;&#x5728; [100, 356] &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#xFF09;&#xFF1B;</li>
+<li>&#x8FED;&#x4EE3;&#x8F93;&#x51FA;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x3002;</li>
+</ul>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x3001;&#x67E5;&#x627E;&#x4EE5;&#x53CA;&#x8FED;&#x4EE3;&#x8F93;&#x51FA;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FD9;&#x51E0;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x7EA2;&#x9ED1;&#x6811;&#x4E5F;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8DDF;&#x8DF3;&#x8868;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6309;&#x7167;&#x533A;&#x95F4;&#x6765;&#x67E5;&#x627E;&#x6570;&#x636E;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x7EA2;&#x9ED1;&#x6811;&#x7684;&#x6548;&#x7387;&#x6CA1;&#x6709;&#x8DF3;&#x8868;&#x9AD8;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x6309;&#x7167;&#x533A;&#x95F4;&#x67E5;&#x627E;&#x6570;&#x636E;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x8DF3;&#x8868;&#x53EF;&#x4EE5;&#x505A;&#x5230; O(logn) &#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5B9A;&#x4F4D;&#x533A;&#x95F4;&#x7684;&#x8D77;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x539F;&#x59CB;&#x94FE;&#x8868;&#x4E2D;&#x987A;&#x5E8F;&#x5F80;&#x540E;&#x904D;&#x5386;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x975E;&#x5E38;&#x9AD8;&#x6548;&#x3002;</p>
+<p>&#x8DF3;&#x8868;&#x76F8;&#x5BF9;&#x7EA2;&#x9ED1;&#x6811;&#x800C;&#x8A00;&#x4EE3;&#x7801;&#x66F4;&#x5BB9;&#x6613;&#x5B9E;&#x73B0;&#xFF0C;&#x7B80;&#x5355;&#x5C31;&#x610F;&#x5473;&#x7740;&#x53EF;&#x8BFB;&#x6027;&#x597D;&#xFF0C;&#x4E0D;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#x3002;&#x8FD8;&#x6709;&#xFF0C;&#x8DF3;&#x8868;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6539;&#x53D8;&#x7D22;&#x5F15;&#x6784;&#x5EFA;&#x7B56;&#x7565;&#xFF0C;&#x6709;&#x6548;&#x5E73;&#x8861;&#x6267;&#x884C;&#x6548;&#x7387;&#x548C;&#x5185;&#x5B58;&#x6D88;&#x8017;&#x3002;</p>
+<h1 id="&#x8DF3;&#x8868;&#x7684;&#x7B80;&#x6613;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">&#x8DF3;&#x8868;&#x7684;&#x7B80;&#x6613;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h1>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SkipList</span> </span>{
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">float</span> SKIPLIST_P = <span class="hljs-number">0.5f</span>;
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_LEVEL = <span class="hljs-number">16</span>;
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> levelCount = <span class="hljs-number">1</span>;
+
+  <span class="hljs-keyword">private</span> Node cls = <span class="hljs-keyword">new</span> Node();  <span class="hljs-comment">// &#x5E26;&#x5934;&#x94FE;&#x8868;</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Node <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value)</span> </span>{
+    Node p = cls;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = levelCount - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; --i) {
+      <span class="hljs-keyword">while</span> (p.forwards[i] != <span class="hljs-keyword">null</span> &amp;&amp; p.forwards[i].data &lt; value) {
+        p = p.forwards[i];
+      }
+    }
+
+    <span class="hljs-keyword">if</span> (p.forwards[<span class="hljs-number">0</span>] != <span class="hljs-keyword">null</span> &amp;&amp; p.forwards[<span class="hljs-number">0</span>].data == value) {
+      <span class="hljs-keyword">return</span> p.forwards[<span class="hljs-number">0</span>];
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value)</span> </span>{
+    <span class="hljs-keyword">int</span> level = randomLevel();
+    Node newNode = <span class="hljs-keyword">new</span> Node();
+    newNode.data = value;
+    newNode.maxLevel = level;
+    Node update[] = <span class="hljs-keyword">new</span> Node[level];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; level; ++i) {
+      update[i] = cls;
+    }
+
+    <span class="hljs-comment">// record every level largest value which smaller than insert value in update[]</span>
+    Node p = cls;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = level - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; --i) {
+      <span class="hljs-keyword">while</span> (p.forwards[i] != <span class="hljs-keyword">null</span> &amp;&amp; p.forwards[i].data &lt; value) {
+        p = p.forwards[i];
+      }
+      update[i] = p;<span class="hljs-comment">// use update save node in search path</span>
+    }
+
+    <span class="hljs-comment">// in search path node next node become new node forwords(next)</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; level; ++i) {
+      newNode.forwards[i] = update[i].forwards[i];
+      update[i].forwards[i] = newNode;
+    }
+
+    <span class="hljs-comment">// update node hight</span>
+    <span class="hljs-keyword">if</span> (levelCount &lt; level) levelCount = level;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">delete</span><span class="hljs-params">(<span class="hljs-keyword">int</span> value)</span> </span>{
+    Node[] update = <span class="hljs-keyword">new</span> Node[levelCount];
+    Node p = cls;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = levelCount - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; --i) {
+      <span class="hljs-keyword">while</span> (p.forwards[i] != <span class="hljs-keyword">null</span> &amp;&amp; p.forwards[i].data &lt; value) {
+        p = p.forwards[i];
+      }
+      update[i] = p;
+    }
+
+    <span class="hljs-keyword">if</span> (p.forwards[<span class="hljs-number">0</span>] != <span class="hljs-keyword">null</span> &amp;&amp; p.forwards[<span class="hljs-number">0</span>].data == value) {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = levelCount - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; --i) {
+        <span class="hljs-keyword">if</span> (update[i].forwards[i] != <span class="hljs-keyword">null</span> &amp;&amp; update[i].forwards[i].data == value) {
+          update[i].forwards[i] = update[i].forwards[i].forwards[i];
+        }
+      }
+    }
+
+    <span class="hljs-keyword">while</span> (levelCount&gt;<span class="hljs-number">1</span>&amp;&amp;cls.forwards[levelCount]==<span class="hljs-keyword">null</span>){
+      levelCount--;
+    }
+
+  }
+
+  <span class="hljs-comment">// &#x7406;&#x8BBA;&#x6765;&#x8BB2;&#xFF0C;&#x4E00;&#x7EA7;&#x7D22;&#x5F15;&#x4E2D;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x5E94;&#x8BE5;&#x5360;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684; 50%&#xFF0C;&#x4E8C;&#x7EA7;&#x7D22;&#x5F15;&#x4E2D;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x5360; 25%&#xFF0C;&#x4E09;&#x7EA7;&#x7D22;&#x5F15;12.5% &#xFF0C;&#x4E00;&#x76F4;&#x5230;&#x6700;&#x9876;&#x5C42;&#x3002;</span>
+  <span class="hljs-comment">// &#x56E0;&#x4E3A;&#x8FD9;&#x91CC;&#x6BCF;&#x4E00;&#x5C42;&#x7684;&#x664B;&#x5347;&#x6982;&#x7387;&#x662F; 50%&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A;&#x65B0;&#x63D2;&#x5165;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x8C03;&#x7528; randomLevel &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5408;&#x7406;&#x7684;&#x5C42;&#x6570;&#x3002;</span>
+  <span class="hljs-comment">// &#x8BE5; randomLevel &#x65B9;&#x6CD5;&#x4F1A;&#x968F;&#x673A;&#x751F;&#x6210; 1~MAX_LEVEL &#x4E4B;&#x95F4;&#x7684;&#x6570;&#xFF0C;&#x4E14; &#xFF1A;</span>
+  <span class="hljs-comment">//        50%&#x7684;&#x6982;&#x7387;&#x8FD4;&#x56DE; 1</span>
+  <span class="hljs-comment">//        25%&#x7684;&#x6982;&#x7387;&#x8FD4;&#x56DE; 2</span>
+  <span class="hljs-comment">//      12.5%&#x7684;&#x6982;&#x7387;&#x8FD4;&#x56DE; 3 ...</span>
+  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">randomLevel</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> level = <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">while</span> (Math.random() &lt; SKIPLIST_P &amp;&amp; level &lt; MAX_LEVEL)
+      level += <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">return</span> level;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printAll</span><span class="hljs-params">()</span> </span>{
+    Node p = cls;
+    <span class="hljs-keyword">while</span> (p.forwards[<span class="hljs-number">0</span>] != <span class="hljs-keyword">null</span>) {
+      System.out.print(p.forwards[<span class="hljs-number">0</span>] + <span class="hljs-string">&quot; &quot;</span>);
+      p = p.forwards[<span class="hljs-number">0</span>];
+    }
+    System.out.println();
+  }
+
+  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> data = -<span class="hljs-number">1</span>;
+    <span class="hljs-keyword">private</span> Node forwards[] = <span class="hljs-keyword">new</span> Node[MAX_LEVEL];
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> maxLevel = <span class="hljs-number">0</span>;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+      StringBuilder builder = <span class="hljs-keyword">new</span> StringBuilder();
+      builder.append(<span class="hljs-string">&quot;{ data: &quot;</span>);
+      builder.append(data);
+      builder.append(<span class="hljs-string">&quot;; levels: &quot;</span>);
+      builder.append(maxLevel);
+      builder.append(<span class="hljs-string">&quot; }&quot;</span>);
+
+      <span class="hljs-keyword">return</span> builder.toString();
+    }
+  }
+
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; yxm666.github.io/mybook 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-01-23 14:41:58
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style> <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="二分查找.html" class="navigation navigation-prev " aria-label="Previous page: 08. 二分查找">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="散列表.html" class="navigation navigation-next " aria-label="Next page: 10.散列表">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"09.跳表","level":"3.8","depth":1,"next":{"title":"10.散列表","level":"3.9","depth":1,"path":"散列表.md","ref":"散列表.md","articles":[]},"previous":{"title":"08. 二分查找","level":"3.7","depth":1,"path":"二分查找.md","ref":"二分查找.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["flexible-alerts","-search","search-pro","pageview-count","simple-page-toc","tbfed-pagefooter","popup","sharing-plus","klipse","flexible-alerts","pageview-count","auto-scroll-table","lightbox","advanced-emoji","katex","disqus","back-to-top-button","chapter-fold","-lunr","splitter","github","github-buttons","code"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy yxm666.github.io/mybook 2019","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"github":{"url":"https://github.com/yxm666"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"pageview-count":{},"github-buttons":{"buttons":[{"user":"yxm666","repo":"mybook","type":"star","size":"small","count":true}]},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"klipse":{"myConfigKey":"it's the default value"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"twitter":true,"vk":false,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"跳表.md","mtime":"2020-01-23T06:41:58.687Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T09:32:44.183Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
